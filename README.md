@@ -44,4 +44,4 @@ export OPENAI_API_KEY=xx-xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX
 
 ## run
 
-python3 src/rag_verbose.py
+python3 src/rag.py
