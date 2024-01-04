@@ -1,7 +1,7 @@
 langchain
+langchain_community
+langchainhub
 openai
-playwright
-beautifulsoup4
-html2text
-tiktoken
 chromadb
+youtube-transcript-api
+pytube

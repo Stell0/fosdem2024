@@ -35,7 +35,6 @@ https://docs.google.com/presentation/d/1qQ8Cx1oP3RyQa2MkQCf39xTYxHjElRJMv_AaL_V1
 
 ```
 pip install -r requirements.txt
-playwright install
 ```
 ## API Key
 
@@ -43,7 +42,6 @@ playwright install
 export OPENAI_API_KEY=xx-xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX 
 ```
 
-
 ## run
 
-python3 src/main.py
+python3 src/rag_verbose.py
