@@ -20,7 +20,8 @@ chunks = []
 for document in documents:
     chunks += (text_splitter.create_documents([document.page_content], [document.metadata]))
 
-# Store our documents in a vector store https://python.langchain.com/docs/modules/data_connection/vectorstores/
+# Store our documents in a vector store
+# https://python.langchain.com/docs/modules/data_connection/vectorstores/
 # (optional) add persist_directory so we can reuse the db without re-creating it
 db = Chroma.from_documents(chunks, OpenAIEmbeddings(), persist_directory="./chroma_db")
 
@@ -30,10 +31,11 @@ from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 llm = ChatOpenAI(streaming=True, callbacks=[StreamingStdOutCallbackHandler()], temperature=0)
 
 # Create a retriever with our vector store
+# https://python.langchain.com/docs/modules/data_connection/retrievers/
 # (optional) return k most similar documents
 retriever = db.as_retriever(search_kwargs={"k": 3})
 
-# Create a prompt template
+# Create a prompt template https://python.langchain.com/docs/modules/model_io/prompts/
 from langchain.prompts import ChatPromptTemplate, PromptTemplate, HumanMessagePromptTemplate
 prompt = ChatPromptTemplate(
     input_variables=['context', 'question'],

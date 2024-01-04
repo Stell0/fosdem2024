@@ -20,7 +20,8 @@ chunks = []
 for document in documents:
     chunks += (text_splitter.create_documents([document.page_content], [document.metadata]))
 
-# Store our documents in a vector store https://python.langchain.com/docs/modules/data_connection/vectorstores/
+# Store our documents in a vector store
+# https://python.langchain.com/docs/modules/data_connection/vectorstores/
 # db is persistent and can be reused
 db = Chroma.from_documents(chunks, OpenAIEmbeddings(), persist_directory="./chroma_db")
 
@@ -30,7 +31,8 @@ from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 llm = ChatOpenAI(streaming=True, callbacks=[StreamingStdOutCallbackHandler()], temperature=0)
 
 # Create a retriever with our vector store
-# Use MultiQueryRetriever https://python.langchain.com/docs/modules/data_connection/retrievers/MultiQueryRetriever
+# Use MultiQueryRetriever
+# https://python.langchain.com/docs/modules/data_connection/retrievers/MultiQueryRetriever
 from langchain.retrievers.multi_query import MultiQueryRetriever
 retriever = MultiQueryRetriever.from_llm(
     retriever=db.as_retriever(), llm=llm
@@ -44,7 +46,10 @@ prompt = hub.pull("rlm/rag-prompt")
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 rag_chain = (
-    {"context": retriever | (lambda docs: "\n\n".join(doc.page_content for doc in docs)), "question": RunnablePassthrough()}
+    {
+        "context": retriever | (lambda docs: "\n\n".join(doc.page_content for doc in docs)),
+        "question": RunnablePassthrough()
+    }
     | prompt
     | llm
     | StrOutputParser()

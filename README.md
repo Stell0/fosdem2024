@@ -31,8 +31,12 @@ https://docs.google.com/presentation/d/1qQ8Cx1oP3RyQa2MkQCf39xTYxHjElRJMv_AaL_V1
 
 ## Install
 
-(optional) `python -m venv fosdemvenv && source fosdemvenv/bin/activate`
+(optional) create virtualenv
+```
+python -m venv fosdemvenv && source fosdemvenv/bin/activate
+```
 
+Install requirements
 ```
 pip install -r requirements.txt
 ```
@@ -44,4 +48,4 @@ export OPENAI_API_KEY=xx-xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX
 
 ## run
 
-python3 src/rag.py
+python src/rag.py
