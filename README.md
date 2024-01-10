@@ -48,4 +48,6 @@ export OPENAI_API_KEY=xx-xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX
 
 ## run
 
-python src/rag.py
+```
+python src/rag/rag.py
+```
