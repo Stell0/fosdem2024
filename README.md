@@ -51,3 +51,10 @@ export OPENAI_API_KEY=xx-xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX
 ```
 python src/rag/rag.py
 ```
+
+## LInks
+
+Visualize different text splitters https://chunkviz.up.railway.app/
+
+Text splitting tutorial https://github.com/FullStackRetrieval-com/RetrievalTutorials/blob/main/5_Levels_Of_Text_Splitting.ipynb
+
