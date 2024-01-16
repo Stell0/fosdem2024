@@ -52,9 +52,19 @@ export OPENAI_API_KEY=xx-xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX
 python src/rag/rag.py
 ```
 
-## LInks
+## Links, tools, credits
+
+LangChain on X is worth following https://x.com/LangChainAI
 
 Visualize different text splitters https://chunkviz.up.railway.app/
 
 Text splitting tutorial https://github.com/FullStackRetrieval-com/RetrievalTutorials/blob/main/5_Levels_Of_Text_Splitting.ipynb
 
+LangChain State of AI 2023 https://blog.langchain.dev/langchain-state-of-ai-2023/
+
+Code screenshot generated with Carbon https://carbon.now.sh/
+
+
+## Contacts
+
+https://twitter.com/Stll00
