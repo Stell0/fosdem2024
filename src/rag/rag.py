@@ -27,16 +27,16 @@ for document in documents:
 print("Storing documents and embeddings in vector store...")
 db = Chroma.from_documents(chunks, OpenAIEmbeddings())
 
-
 print("Ready to ask!\n###########################################\n")
-# Chat model with stdout streaming output
-from langchain.chat_models import ChatOpenAI
-from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
-llm = ChatOpenAI(streaming=True, callbacks=[StreamingStdOutCallbackHandler()], temperature=0)
 
 # Create a retriever with our vector store
 # https://python.langchain.com/docs/modules/data_connection/retrievers/
 retriever = db.as_retriever()
+
+# Chat model with stdout streaming output
+from langchain.chat_models import ChatOpenAI
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+llm = ChatOpenAI(streaming=True, callbacks=[StreamingStdOutCallbackHandler()], temperature=0)
 
 # Create a prompt template https://python.langchain.com/docs/modules/model_io/prompts/
 from langchain.prompts import ChatPromptTemplate, PromptTemplate, HumanMessagePromptTemplate
