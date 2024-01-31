@@ -15,8 +15,7 @@ print("Text splitter is splitting documents...")
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=2000,
-    chunk_overlap=0,
-    length_function=len,
+    chunk_overlap=0
 )
 chunks = []
 for document in documents:
@@ -26,7 +25,7 @@ for document in documents:
 # https://python.langchain.com/docs/modules/data_connection/vectorstores/
 # (optional) add persist_directory so we can reuse the db without re-creating it
 print("Storing documents and embeddings in vector store...")
-db = Chroma.from_documents(chunks, OpenAIEmbeddings(), persist_directory="./chroma_db")
+db = Chroma.from_documents(chunks, OpenAIEmbeddings())
 
 
 print("Ready to ask!\n###########################################\n")
@@ -37,8 +36,7 @@ llm = ChatOpenAI(streaming=True, callbacks=[StreamingStdOutCallbackHandler()], t
 
 # Create a retriever with our vector store
 # https://python.langchain.com/docs/modules/data_connection/retrievers/
-# (optional) return k most similar documents
-retriever = db.as_retriever(search_kwargs={"k": 3})
+retriever = db.as_retriever()
 
 # Create a prompt template https://python.langchain.com/docs/modules/model_io/prompts/
 from langchain.prompts import ChatPromptTemplate, PromptTemplate, HumanMessagePromptTemplate

@@ -12,9 +12,8 @@ documents = loader.load()
 # https://python.langchain.com/docs/modules/data_connection/document_transformers/
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=2000,
-    chunk_overlap=0,
-    length_function=len,
+    chunk_size=500,
+    chunk_overlap=0
 )
 chunks = []
 for document in documents:
@@ -66,6 +65,6 @@ questions = [
 
 # invoke the LCEL chain for each question
 for question in questions:
-    print(question+"\n")
+    print(f"Question: {question}\n")
     result = rag_chain.invoke(question)
-    print("\n")
+    print("\n#########################################\n")
