@@ -4,12 +4,14 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 # Document loader
 # https://python.langchain.com/docs/modules/data_connection/document_loaders/
 # https://python.langchain.com/docs/integrations/document_loaders/
+print("Document loader is loading documents...")
 from langchain_community.document_loaders import YoutubeLoader
 loader = YoutubeLoader.from_youtube_url("https://www.youtube.com/watch?v=8fEEbKJoNbU")
 documents = loader.load()
 
 # Split documents with text splitter
 # https://python.langchain.com/docs/modules/data_connection/document_transformers/
+print("Text splitter is splitting documents...")
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=2000,
@@ -23,8 +25,11 @@ for document in documents:
 # Store our documents in a vector store
 # https://python.langchain.com/docs/modules/data_connection/vectorstores/
 # (optional) add persist_directory so we can reuse the db without re-creating it
+print("Storing documents and embeddings in vector store...")
 db = Chroma.from_documents(chunks, OpenAIEmbeddings(), persist_directory="./chroma_db")
 
+
+print("Ready to ask!\n###########################################\n")
 # Chat model with stdout streaming output
 from langchain.chat_models import ChatOpenAI
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
@@ -58,9 +63,9 @@ questions = [
     "What can you say abou black holes?",
 ]
 
-# put all together
+# put everything together
 for question in questions:
-    print(question+"\n")
+    print(f"Question: {question}\n")
     # search for similar documents
     docs = retriever.get_relevant_documents(question)
     # create context merging docs together
@@ -69,4 +74,4 @@ for question in questions:
     prompt_val = prompt.invoke({"context": context, "question": question})
     # get response from llm
     result = llm(prompt_val.to_messages())
-    print("\n")
+    print("\n#########################################\n")

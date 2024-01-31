@@ -6,3 +6,4 @@ chromadb
 youtube-transcript-api
 pytube
 transformers
+tiktoken

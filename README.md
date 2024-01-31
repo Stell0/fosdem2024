@@ -1,6 +1,29 @@
 # LangChain From 0 To 1: Unveiling the Power of LLM Programming
 
-## Abstract
+## Install
+
+(optional) create virtualenv
+```
+python -m venv fosdemvenv && source fosdemvenv/bin/activate
+```
+
+Install requirements
+```
+pip install -r requirements.txt
+```
+## API Key
+
+```
+export OPENAI_API_KEY=xx-xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX 
+```
+
+## run
+
+```
+python src/rag/rag.py
+```
+
+## Talk Abstract
 
 Unlocking the realm of Artificial Intelligence has never been more accessible than with LangChain and its seamless integration of external APIs or locally hosted OS Language Model Models (LLMs). In this talk, we embark on a journey from zero to Retrieval Augmented Generation (RAG).
 
@@ -25,28 +48,28 @@ Key Takeaways:
 Join us in this concise yet comprehensive session, where we demystify LangChain and empower you to harness the full potential of LLM programming. Whether you're a novice or an experienced developer, this talk is your gateway to building intelligent applications with ease.
 
 
-## Presentation
+## Useful links
+
+### Presentation
 
 https://docs.google.com/presentation/d/1qQ8Cx1oP3RyQa2MkQCf39xTYxHjElRJMv_AaL_V1fK0
 
-## Install
+### Rag in production
 
-(optional) create virtualenv
-```
-python -m venv fosdemvenv && source fosdemvenv/bin/activate
-```
+LangChain chatbot
 
-Install requirements
-```
-pip install -r requirements.txt
-```
-## API Key
+https://chat.langchain.com/
 
-```
-export OPENAI_API_KEY=xx-xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX 
-```
+https://github.com/langchain-ai/chat-langchain
 
-## run
+### LangChain documentation
+
+https://github.com/langchain-ai/langchain
+
+
+### LangChain GitHub
+
+https://github.com/langchain-ai/langchain
 
 ```
 python src/rag/rag.py
