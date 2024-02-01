@@ -31,22 +31,21 @@ Our hands-on exploration will guide you through the basics of LangChain and LLMs
 
 Key Takeaways:
 
-    Querying LLMs via APIs: Witness the simplicity of tapping into the vast capabilities of Language Models through straightforward API calls.
+- Querying LLMs via APIs: Witness the simplicity of tapping into the vast capabilities of Language Models through straightforward API calls.
 
-    Textual Data Handling: Learn to load text from a diverse array of documents, enabling your application to process information from various sources.
+- Textual Data Handling: Learn to load text from a diverse array of documents, enabling your application to process information from various sources.
 
-    Text Tokenization Techniques: Explore the world of text tokenization, understanding different methods to break down textual data into meaningful units.
+- Text Splitting Techniques: Explore the world of text splitting, understanding different methods to break down textual data into meaningful units.
 
-    Introduction to Embeddings: Gain insights into the fundamental concept of embeddings, unraveling why they are pivotal in enhancing the intelligence of applications.
+- Introduction to Embeddings: Gain insights into the fundamental concept of embeddings, unraveling why they are pivotal in enhancing the intelligence of applications.
 
-    Vector Databases: Navigate the landscape of vector databases and understand their role in optimizing data retrieval and manipulation.
+- Vector Databases: Navigate the landscape of vector databases and understand their role in optimizing data retrieval and manipulation.
 
-    RAG (Retrieval Augmented Generation): Witness the transformative power of RAG as we leverage it to query LLMs over your dataset, showcasing a synergy between retrieval and generation.
+- RAG (Retrieval Augmented Generation): Witness the transformative power of RAG as we leverage it to query LLMs over your dataset, showcasing a synergy between retrieval and generation.
 
-    Synthetic Data: An Exemplar Scenario: Conclude the journey with an example of synthetic data generation
+- Chains and other notable use cases
 
 Join us in this concise yet comprehensive session, where we demystify LangChain and empower you to harness the full potential of LLM programming. Whether you're a novice or an experienced developer, this talk is your gateway to building intelligent applications with ease.
-
 
 ## Useful links
 
