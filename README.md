@@ -63,8 +63,7 @@ https://github.com/langchain-ai/chat-langchain
 
 ### LangChain documentation
 
-https://github.com/langchain-ai/langchain
-
+https://python.langchain.com/docs/get_started/introduction
 
 ### LangChain GitHub
 
