@@ -51,7 +51,7 @@ Join us in this concise yet comprehensive session, where we demystify LangChain 
 
 ### Presentation
 
-https://docs.google.com/presentation/d/1qQ8Cx1oP3RyQa2MkQCf39xTYxHjElRJMv_AaL_V1fK0
+https://docs.google.com/presentation/d/1frjlNBY0Et7xpNizhKVtdtTLe09DXuQv8BjGmbRZyNk/
 
 ### Rag in production
 
