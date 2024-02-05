@@ -1,5 +1,9 @@
 # LangChain From 0 To 1: Unveiling the Power of LLM Programming
 
+The talk 
+
+https://video.fosdem.org/2024/ub2252a/fosdem-2024-2384-langchain-from-0-to-1-unveiling-the-power-of-llm-programming.av1.webm
+
 ## Install
 
 (optional) create virtualenv
